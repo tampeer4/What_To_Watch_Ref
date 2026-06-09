@@ -35,6 +35,24 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Настроить переменные окружения(создать файл .env):
+```
+FLASK_APP=opinions_app
+FLASK_DEBUG=1
+```
+
+Инициализировать и применить миграции (создать таблицы в БД):
+```
+flask db init
+flask db migrate -m "initial migration"
+flask db upgrade
+```
+
+Загрузить начальные данные из CSV:
+```
+flask load_opinions
+```
+
 Запустить проект:
 
 ```
